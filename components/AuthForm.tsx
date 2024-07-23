@@ -12,7 +12,7 @@ import { authFormSchema } from "@/lib/utils"
 import CustomInput from "./CustomInput"
 import { Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { signIn, signUp } from "@/lib/actions/user.actions"
+import { getLoggedInUser, signIn, signUp } from "@/lib/actions/user.actions"
 
 
 const AuthForm = ({ type }: { type: string }) => {
@@ -74,7 +74,7 @@ const AuthForm = ({ type }: { type: string }) => {
                                 ? 'Sign In'
                                 : 'Sign Up'
                         }
-                        <p className="text-16 font-normal text-gray-600">
+                        <p className="text-16 font-normal text-gray-600 mt-5">
                             {user
                                 ? 'Link your account to Horizon'
                                 : 'Please enter your details'
